@@ -61,7 +61,7 @@ class _QRpageState extends State<QRpage> {
       await controller.pauseCamera();
 
       // QR 코드 데이터를 표시하는 대화상자 표시
-      showDialog(
+      await showDialog(
         context: context,
         barrierDismissible: true, // 화면의 다른 부분을 누르면 대화상자 닫기
         builder: (BuildContext context) {
@@ -89,22 +89,16 @@ class _QRpageState extends State<QRpage> {
                   Text(qrText),
               ],
             ),
-            actions: [
-              TextButton(
-                onPressed: () async {
-                  Navigator.of(context).pop();
-                  await controller.resumeCamera();
-                },
-                child: Text('닫기'),
-              ),
-            ],
           );
         },
       );
+
+      // 대화상자가 닫힌 후에 QR 코드 스캐너 다시 활성화
+      await controller.resumeCamera();
     });
   }
-}
 
-void main() => runApp(MaterialApp(
-      home: QRpage(),
-    ));
+  void main() => runApp(MaterialApp(
+        home: QRpage(),
+      ));
+}
