@@ -1,4 +1,5 @@
 # Simple QR scanner
 
-![frame](https://github.com/user-attachments/assets/62d2f41d-7a1d-4c3f-a2d4-5ca639449572)
-![KakaoTalk_20250115_230502039](https://github.com/user-attachments/assets/21c07652-8fd9-4886-b302-24da30f81114)
+![frame](https://github.com/user-attachments/assets/a27e8dd9-4915-40e8-a81f-384eec093a0b) ![KakaoTalk_20250115_230502039](https://github.com/user-attachments/assets/50ea3d6a-39a7-4648-a8d6-091d107af84e)
+
+
